@@ -1,4 +1,22 @@
-import { createContext } from "react";
+import { createContext, Dispatch, ReactNode, useState } from "react";
 
-const GlobalContext = createContext(null);
+interface GlobalContextProps {
+    isFormOn: boolean
+    setIsFormOn: Dispatch<boolean>
+}
 
+const GlobalContext = createContext<GlobalContextProps | null>(null);
+
+export const GlobalProvider = ({ children }: { children: ReactNode }) => {
+
+    const [isFormOn, setIsFormOn] = useState<boolean>(false);
+    
+    const value = { isFormOn, setIsFormOn };
+
+    return (
+        <GlobalContext.Provider value={value}>
+            {children}
+        </GlobalContext.Provider>
+    )
+
+}

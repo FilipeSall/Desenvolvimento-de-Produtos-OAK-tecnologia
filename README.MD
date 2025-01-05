@@ -1,5 +1,7 @@
 # Como Inicializar o Projeto
 
+[Repositório no GitHub](https://github.com/FilipeSall/Desenvolvimento-de-Produtos-OAK-tecnologia)
+
 Este guia explica como configurar e inicializar o projeto em sua máquina local. Certifique-se de ter o **Node.js** instalado antes de começar.
 
 ## Passo 1: Configurando o Backend

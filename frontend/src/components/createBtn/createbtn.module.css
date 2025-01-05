@@ -1,0 +1,27 @@
+.newProductCell {
+    text-align: center;
+    padding: 1rem !important;
+}
+
+.newProductButton {
+    width: 100%;
+    padding: 12px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.875rem;
+    transition: all 0.2s ease;
+    font-weight: 500;
+}
+
+.newProductButton:hover {
+    background-color: #218838;
+}
+
+
+.newProductButton {
+    width: auto;
+    min-width: 200px;
+}

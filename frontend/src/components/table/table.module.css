@@ -1,0 +1,158 @@
+.container {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.head {
+    background-color: #f8f9fa;
+}
+
+.isAvailable {
+    color: #28a745 !important;
+    font-weight: 500;
+}
+
+.isUnavailable {
+    color: #dc3545 !important;
+    font-weight: 500;
+}
+
+.head tr th {
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+    color: #343a40;
+    border-bottom: 2px solid #dee2e6;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+}
+
+.body tr {
+    border-bottom: 1px solid #dee2e6;
+    transition: background-color 0.2s ease;
+    height: 75px;
+    
+}
+
+.body tr:hover {
+    background-color: #f8f9fa;
+}
+
+.body tr:last-child {
+    border-bottom: none;
+}
+
+.body td {
+    padding: 1rem;
+    color: #495057;
+}
+
+.body td h2 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #212529;
+}
+
+.body td p {
+    margin: 0.5rem 0 0;
+    font-size: 0.875rem;
+    color: #6c757d;
+}
+
+.price{
+    color: #212529 !important;
+}
+
+.actions {
+    display: flex;
+    height: 75px;
+    gap: 8px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.editButton,
+.deleteButton {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.875rem;
+    transition: all 0.2s ease;
+}
+
+.editButton {
+    background-color: #1178e7;
+    color: white;
+}
+
+.editButton:hover {
+    background-color: #0056b3;
+}
+
+.deleteButton {
+    background-color: #bd3d49;
+    color: white;
+}
+
+.deleteButton:hover {
+    background-color: #c82333;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .head tr th,
+    .body td {
+        padding: 0.75rem;
+    }
+
+    .body td h2 {
+        font-size: 0.875rem;
+    }
+
+    .body td p {
+        font-size: 0.75rem;
+    }
+}
+
+.body td:last-child {
+    font-weight: 500;
+}
+
+
+.body td:last-child[data-available="true"] {
+    color: #28a745;
+}
+
+.body td:last-child[data-available="false"] {
+    color: #dc3545;
+}
+
+.tableHeader {
+    margin-bottom: 1rem;
+}
+
+
+.sortableHeader {
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.sortableHeader:hover {
+    background-color: #f8f9fa;
+}

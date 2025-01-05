@@ -22,6 +22,7 @@ function Form() {
         price: '',
     });
 
+    //Preencher o formulario caso tenha o estado global de produto selecioando para edição.
     useEffect(() => {
         if (selectedProduct) {
             setFormData({
@@ -80,7 +81,6 @@ function Form() {
                 isAvailable: formData.isAvailable ?? true 
             };
 
-            console.log('Dados formatados:', formattedData); 
 
             if (selectedProduct) {
                 const response = await axios.put(`http://localhost:3001/products/${selectedProduct.id}`, formattedData);
